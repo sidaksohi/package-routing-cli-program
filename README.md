@@ -17,15 +17,16 @@ The output of this algorithm is a ‘route’, in which the driver both starts a
 
 ## B. Algorithm Overview
 I created my algorithm from scratch, and did not reference or copy/paste any pathfinding algorithms.
-Although I knew of various pathfinding algorithms, I decided to make my own for a couple reasons: 1) To see if I could make a functioning algorithm in the first place, and 2) to see which known algorithm mine would resemble and how I could have further optimized it.
-My algorithm is very simple, but it got the job done. Here’s how it works, given a list of packages:
-Find the package in the list which is closest to the hub
-Remove that package from the list, add it to the route
-Find the package, of packages remaining, that is closest to the last package in the route
-Repeat steps 2, 3 until there is only one package left
-For the last package, find the distance to the hub and add it to the route
+Although I knew of various pathfinding algorithms, I decided to make my own for a couple reasons: 1) To see if I could create functioning solution without assistance, and 2) to see which known algorithm mine would resemble, and how I could have further optimized it.
 
-On review of the algorithm and looking at algorithms, I found that my algorithm very closely resembles the 1st nearest neighbor algorithm. In essence, the algorithm takes an input of a point on a graph, and will find you the point nearest to the input, which is exactly what I am doing. In my algorithm, it repeats the 1st nearest neighbor for the entire list of packages, with the starting and ending locations for the route both being the hub. Here is an example of an input and output of my algorithm:
+My algorithm is very simple, but it got the job done. Here’s how it works, given a list of packages:
+1. Find the package in the list which is closest to the hub
+2. Remove that package from the list, add it to the route
+3. Find the package, of packages remaining, that is closest to the last package in the route
+4. Repeat steps 2, 3 until there is only one package left
+5. For the last package, find the distance to the hub and add it to the route
+
+On review of the algorithm and looking at algorithms, I found that my algorithm very closely resembles the *1st nearest neighbor algorithm*. In essence, the algorithm takes an input of a point on a graph, and will find you the point nearest to the input, which is exactly what I am doing. In my algorithm, it repeats the 1st nearest neighbor for the entire list of packages, with the starting and ending locations for the route both being the hub. Here is an example of an input and output of my algorithm:
 ##### Input; a list of packages `[‘Package ID’, ‘Address’, ‘City’, ‘State’, ‘Zip’, 'Time to Deliver By', 'Package Weight', 'Notes', 'Package Status']`:
  
     ['3', '233 Canyon Rd', 'Salt Lake City', 'UT', '84103', 'EOD', '2', 'Can only be on truck 2', 'AT_HUB']
