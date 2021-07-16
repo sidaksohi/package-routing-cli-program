@@ -4,11 +4,10 @@
 ##### Python Version 3.8
 ##### By Sidak Sohi
 
+# Preview
+![PreviewGif](https://i.imgur.com/BWRTGVy.gif)
 
-
-
-
-# Algorithm Overview
+# Overview
 ## A. Stated Problem
 Using Python version 3.8, use an algorithm to create a route for various trucks at ‘WGUPS’. The algorithm should result in a total distance of less than 145 miles and deliver all 40 packages on time, according to each package’s specifications. The program will have functionality to insert or search for a package, as well as the ability to view the status of all packages at a given time. 
 
